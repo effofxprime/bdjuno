@@ -55,6 +55,8 @@ func (suite *DbTestSuite) SetupTest() {
 		"public",
 		-1,
 		-1,
+		100000,
+		1000,
 	)
 	db, err := database.Builder(junodb.NewContext(dbCfg, &codec, logging.DefaultLogger()))
 	suite.Require().NoError(err)

@@ -5,11 +5,11 @@ go 1.17
 require (
 	github.com/Sifchain/sifnode v0.0.0-20211110000810-22b3ac797839
 	github.com/cosmos/cosmos-sdk v0.42.10
-	github.com/forbole/juno/v3 v3.0.0-20220309072106-724189922aa6
+	github.com/forbole/juno/v3 v3.0.0-20220314150742-ac4da780ea8a
 	github.com/go-co-op/gocron v1.13.0
 	github.com/gogo/protobuf v1.3.3
 	github.com/gorilla/mux v1.8.0
-	github.com/jmoiron/sqlx v1.2.1-0.20200324155115-ee514944af4b
+	github.com/jmoiron/sqlx v1.3.4
 	github.com/lib/pq v1.10.4
 	github.com/pelletier/go-toml v1.9.4
 	github.com/prometheus/client_golang v1.12.1
