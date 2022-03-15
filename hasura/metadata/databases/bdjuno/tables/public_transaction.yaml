@@ -8,11 +8,14 @@ object_relationships:
 array_relationships:
 - name: messagesByTransactionHash
   using:
-    foreign_key_constraint_on:
-      column: transaction_hash
-      table:
-        name: message
+    manual_configuration:
+      remote_table:
         schema: public
+        name: message
+      insertion_order:
+      column_mapping:
+        transaction_hash: hash
+        partition_id: partition_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -29,5 +32,6 @@ select_permissions:
     - gas_used
     - raw_log
     - logs
+    - partition_id
     filter: {}
   role: anonymous
