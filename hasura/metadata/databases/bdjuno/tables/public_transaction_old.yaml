@@ -1,5 +1,5 @@
 table:
-  name: transaction
+  name: transaction_old
   schema: public
 object_relationships:
 - name: block
@@ -11,7 +11,7 @@ array_relationships:
     foreign_key_constraint_on:
       column: transaction_hash
       table:
-        name: message
+        name: message_old
         schema: public
 select_permissions:
 - permission:
