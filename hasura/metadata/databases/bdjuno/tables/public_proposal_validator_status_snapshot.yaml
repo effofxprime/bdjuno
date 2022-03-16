@@ -7,7 +7,7 @@ object_relationships:
     foreign_key_constraint_on: proposal_id
 - name: validator
   using:
-    foreign_key_constraint_on: validator_address
+    foreign_key_constraint_on: consensus_address
 select_permissions:
 - permission:
     allow_aggregations: true
