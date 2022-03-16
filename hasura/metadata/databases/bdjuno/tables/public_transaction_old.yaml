@@ -6,7 +6,7 @@ object_relationships:
   using:
     foreign_key_constraint_on: height
 array_relationships:
-- name: messagesByTransactionHash
+- name: messagesByTransactionHashOld
   using:
     foreign_key_constraint_on:
       column: transaction_hash
