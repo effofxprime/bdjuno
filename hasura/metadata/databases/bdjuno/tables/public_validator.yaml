@@ -15,7 +15,7 @@ object_relationships:
   using:
     manual_configuration:
       column_mapping:
-        consensus_address: validator_address
+        validator_address: consensus_address
       insertion_order: null
       remote_table:
         name: proposal_validator_status_snapshot
@@ -64,14 +64,6 @@ array_relationships:
       table:
         name: validator_info
         schema: public
-- name: proposal_validator_status_snapshot
-  using:
-    foreign_key_constraint_on:
-      column: validator_address
-      table:
-        name: proposal_validator_status_snapshot
-        schema: public
-
 - name: validator_signing_infos
   using:
     manual_configuration:
