@@ -19,6 +19,7 @@ import (
 	"github.com/forbole/bdjuno/v2/modules"
 
 	gaiaapp "github.com/cosmos/gaia/v6/app"
+	rizonapp "github.com/rizon-world/rizon/app"
 )
 
 func main() {
@@ -55,6 +56,7 @@ func main() {
 func getBasicManagers() []module.BasicManager {
 	return []module.BasicManager{
 		gaiaapp.ModuleBasics,
+		rizonapp.ModuleBasics,
 	}
 }
 
