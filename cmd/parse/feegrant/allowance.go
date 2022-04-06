@@ -7,26 +7,28 @@ import (
 	"github.com/forbole/bdjuno/v2/modules/feegrant"
 	"github.com/forbole/bdjuno/v2/utils"
 
-	"github.com/forbole/juno/v2/cmd/parse"
 	"github.com/spf13/cobra"
 
 	"github.com/forbole/bdjuno/v2/database"
 
 	"sort"
+	"github.com/forbole/juno/v3/types/config"
 
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 
 	feegranttypes "github.com/cosmos/cosmos-sdk/x/feegrant"
 	"github.com/rs/zerolog/log"
+	parsecmdtypes "github.com/forbole/juno/v3/cmd/parse/types"
+
 )
 
 // allowanceCmd returns the Cobra command allowing to fix all things related to fee grant allowance
-func allowanceCmd(parseConfig *parse.Config) *cobra.Command {
+func allowanceCmd(parseConfig *parsecmdtypes.Config) *cobra.Command {
 	return &cobra.Command{
 		Use:   "allowance",
 		Short: "Fix granted and revoked allowances to the latest height",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			parseCtx, err := parse.GetParsingContext(parseConfig)
+			parseCtx, err := parsecmdtypes.GetParserContext(config.Cfg, parseConfig)
 			if err != nil {
 				return err
 			}

@@ -5,13 +5,12 @@ go 1.17
 require (
 	github.com/cosmos/cosmos-sdk v0.44.4
 	github.com/cosmos/gaia/v6 v6.0.0-rc1
-	github.com/forbole/juno/v2 v2.0.0-20220223115732-dbb226a91ce9
-	github.com/go-co-op/gocron v1.11.0
+	github.com/forbole/juno/v3 v3.0.0
+	github.com/go-co-op/gocron v1.13.0
 	github.com/gogo/protobuf v1.3.3
 	github.com/gorilla/mux v1.8.0
-	github.com/jmoiron/sqlx v1.2.1-0.20200324155115-ee514944af4b
+	github.com/jmoiron/sqlx v1.3.4
 	github.com/lib/pq v1.10.4
-	github.com/pelletier/go-toml v1.9.4
 	github.com/prometheus/client_golang v1.12.1
 	github.com/proullon/ramsql v0.0.0-20181213202341-817cee58a244
 	github.com/rs/zerolog v1.26.1
@@ -88,6 +87,7 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
 	github.com/mtibben/percent v0.2.1 // indirect
+	github.com/pelletier/go-toml v1.9.4 // indirect
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
@@ -130,4 +130,5 @@ replace (
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/tendermint/tendermint => github.com/forbole/tendermint v0.34.13-0.20210820072129-a2a4af55563d
 	google.golang.org/grpc => google.golang.org/grpc v1.33.2
+
 )
